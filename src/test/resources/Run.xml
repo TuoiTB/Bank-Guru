@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="BankGuru - UI Automation">
+	<parameter name="url" value="" />
+
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.AllureTestListener" />
+	</listeners>
+
+	<test name="Run on Chrome" preserve-order="true">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class
+				name="Payment.Add_Employee" />
+		</classes>
+	</test>
+</suite>
