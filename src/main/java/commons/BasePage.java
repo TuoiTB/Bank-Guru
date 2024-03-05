@@ -308,11 +308,13 @@ public class BasePage {
 	public boolean isElementDisplayed(WebDriver driver, String locator) {
 		return getElement(driver, locator).isDisplayed();
 	}
-	
 	public boolean isElementDisplayed(WebDriver driver, String locator, String...restParams) {
 		return getElement(driver, getDynamicLocator(locator, restParams)).isDisplayed();
 	}
-	
+	public WebElement waitElementPresenceInDom(WebDriver driver, String locator) {
+		return new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.presenceOfElementLocated(getByLocator(locator)));
+	}
+
 	public void setImplicitWait(WebDriver driver, long timeout) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
 	}
@@ -394,7 +396,9 @@ public class BasePage {
 
 	public void enterKeyBoard(WebDriver driver) {
 		new Actions(driver).keyDown(Keys.ENTER).perform();
-	
+	}
+	public void TABKeyBoard(WebDriver driver) {
+		new Actions(driver).keyDown(Keys.TAB).perform();
 	}
 	
 	public Object executeForBrowser(WebDriver driver, String javaScript) {
@@ -496,7 +500,12 @@ public class BasePage {
 	public void waitForElementVisible(WebDriver driver, String locator, String...restParams) {
 		new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(getDynamicLocator(locator, restParams))));
 	}
-	
+	public void waitForElementPresence(WebDriver driver, String locator) {
+		new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.presenceOfElementLocated(getByLocator(locator)));
+	}
+	public boolean isElementPresence(WebDriver driver, String locator) {
+		return new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.presenceOfElementLocated(getByLocator(locator)));
+    }
 	public void waitForListElementVisible(WebDriver driver, String locator) {
 		new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByLocator(locator)));
 	}
@@ -524,7 +533,6 @@ public class BasePage {
 	public Alert waitForAlertPresence(WebDriver driver) {
 		return new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.alertIsPresent());
 	}
-
 	
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;

@@ -2,7 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class DashBoardPageObject extends SidePanelPageObject{
+public class DashBoardPageObject extends SideBarPageObject{
     WebDriver driver;
 
     public DashBoardPageObject(WebDriver driver) {

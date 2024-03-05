@@ -2,10 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class LeavePageObject extends SidePanelPageObject{
+public class EditAccountPageObject extends SideBarPageObject{
     WebDriver driver;
 
-    public LeavePageObject(WebDriver driver) {
+    public EditAccountPageObject(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }

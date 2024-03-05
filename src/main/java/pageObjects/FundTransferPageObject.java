@@ -2,10 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class MaintenancePageObject extends SidePanelPageObject{
+public class FundTransferPageObject extends SideBarPageObject{
     WebDriver driver;
 
-    public MaintenancePageObject(WebDriver driver) {
+    public FundTransferPageObject(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }

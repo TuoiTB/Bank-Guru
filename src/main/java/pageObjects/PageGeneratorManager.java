@@ -3,40 +3,41 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 
 public class PageGeneratorManager {
-    public static AdminPageObject getAdminPage(WebDriver driver){
-        return new AdminPageObject(driver);
+    public static NewCustomerPageObject getNewCustomerPage(WebDriver driver){
+        return new NewCustomerPageObject(driver);
     }
-    public static BuzzPageObject getBuzzPage(WebDriver driver){
-        return new BuzzPageObject(driver);
-    }
-    public static ClaimPageObject getClaimPage(WebDriver driver){
-        return new ClaimPageObject(driver);
+    public static EditCustomerPageObject getEditCustomerPage(WebDriver driver){
+        return new EditCustomerPageObject(driver);
     }
     public static DashBoardPageObject getDashBoardPage(WebDriver driver){
         return new DashBoardPageObject(driver);
     }
-    public static DirectoryPageObject getDirectoryPage(WebDriver driver){
-        return new DirectoryPageObject(driver);
+    public static DeleteCustomerPageObject getDeleteCustomerPage(WebDriver driver){
+        return new DeleteCustomerPageObject(driver);
     }
-    public static LeavePageObject getLeavePage(WebDriver driver){
-        return new LeavePageObject(driver);
+    public static NewAccountPageObject getNewAccountPage(WebDriver driver){
+        return new NewAccountPageObject(driver);
     }
-    public static MaintenancePageObject getMaintenancePage(WebDriver driver){
-        return new MaintenancePageObject(driver);
+    public static EditAccountPageObject getEditAccountPage(WebDriver driver){
+        return new EditAccountPageObject(driver);
     }
-    public static MyInforPageObject getMyInforPage(WebDriver driver){
-        return new MyInforPageObject(driver);
+    public static DeleteAccountPageObject getDeleteAccountPage(WebDriver driver){
+        return new DeleteAccountPageObject(driver);
     }
-    public static PerformancePageObject getPerformancePage(WebDriver driver){
-        return new PerformancePageObject(driver);
+    public static DepositPageObject getDepositPage(WebDriver driver){
+        return new DepositPageObject(driver);
     }
-    public static PIMPageObject getPIMPage(WebDriver driver){
-        return new PIMPageObject(driver);
+    public static WithDrawalPageObject getWithDrawalPage(WebDriver driver){
+        return new WithDrawalPageObject(driver);
     }
-    public static RecruitmentPageObject getRecruitmentPage(WebDriver driver){
-        return new RecruitmentPageObject(driver);
+    public static ChangePasswordPageObject getChangePasswordPage(WebDriver driver){
+        return new ChangePasswordPageObject(driver);
     }
-    public static TimePageObject getTimePage(WebDriver driver){
-        return new TimePageObject(driver);
+    public static FundTransferPageObject getFundTransferPage(WebDriver driver){
+        return new FundTransferPageObject(driver);
+    }
+
+    public static LoginPageObject getLoginPage(WebDriver driver) {
+        return  new LoginPageObject(driver);
     }
 }

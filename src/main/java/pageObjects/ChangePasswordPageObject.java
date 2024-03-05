@@ -2,10 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class ClaimPageObject extends SidePanelPageObject{
+public class ChangePasswordPageObject extends SideBarPageObject{
     WebDriver driver;
 
-    public ClaimPageObject(WebDriver driver) {
+    public ChangePasswordPageObject(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }

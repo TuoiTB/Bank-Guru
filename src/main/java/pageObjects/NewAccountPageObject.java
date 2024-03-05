@@ -2,10 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class PerformancePageObject extends SidePanelPageObject{
+public class NewAccountPageObject extends SideBarPageObject{
     WebDriver driver;
 
-    public PerformancePageObject(WebDriver driver) {
+    public NewAccountPageObject(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }

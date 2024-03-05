@@ -2,10 +2,10 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-public class BuzzPageObject extends SidePanelPageObject{
+public class EditCustomerPageObject extends SideBarPageObject{
     WebDriver driver;
 
-    public BuzzPageObject(WebDriver driver) {
+    public EditCustomerPageObject(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }
